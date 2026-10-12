@@ -58,8 +58,8 @@
 @section('scripts')
 <script>
 const api = window.ZakatApi;
-const rupiah = n => 'Rp ' + Number(n).toLocaleString('id-ID');
 
+const rupiah = n => 'Rp ' + Number(n).toLocaleString('id-ID');
 async function load() {
     try {
         const res = await api.berasPrice();
@@ -92,7 +92,7 @@ document.getElementById('saveBtn').addEventListener('click', async () => {
     document.getElementById('saveText').innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Menyimpan...';
     try {
         // PUT /beras-price memerlukan bearerAuth (hak admin) — dari backend
-        await fetch((window.ZAKAT_API_URL || 'http://localhost:4010') + '/beras-price', {
+        await fetch((window.ZAKAT_API_URL || (location.origin + '/api')) + '/beras-price', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': 'Bearer ' + (window.ZB_TOKEN || '') },
             body: JSON.stringify({ price: harga, note: document.getElementById('noteInput').value })

@@ -8,7 +8,9 @@ window.ZakatApi = api;
 window.initAbstractBg = initAbstractBg;
 window.autoInitAbstractBg = autoInitAbstractBg;
 
-// Konfigurasi alamat API (mudah diganti saat back-end asli siap)
-window.ZAKAT_API_URL = window.ZAKAT_API_URL || 'http://localhost:4010';
+// Konfigurasi alamat API — memakai API asli (Laravel) di domain yang sama.
+// Bisa diubah lewat VITE_API_URL atau window.ZAKAT_API_URL bila perlu.
+const DEFAULT_API = (location.origin || 'http://zakat-banua.test') + '/api';
+window.ZAKAT_API_URL = window.ZAKAT_API_URL || DEFAULT_API;
 
 export { api };

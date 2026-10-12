@@ -107,24 +107,13 @@
 
                 <div class="mt-5">
                     <div class="text-[11px] tracking-[0.14em] font-semibold text-olive/50 text-center mb-2">— AKUN DEMO (KLIK UNTUK ISI) —</div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button type="button" data-email="superadmin@banjarbaru.go.id" data-pass="superadmin123" class="demo text-left bg-white border border-cream-3 rounded-xl px-3 py-2 hover:bg-cream transition">
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-violet-500"></span><span class="text-[11px] font-bold text-olive-dark">Super Admin</span></div>
-                            <div class="text-[10px] text-olive/50">superadmin@banjarbaru.go.id</div>
-                        </button>
-                        <button type="button" data-email="admin@baznas-banjarbaru.id" data-pass="admin123" class="demo text-left bg-white border border-cream-3 rounded-xl px-3 py-2 hover:bg-cream transition">
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="text-[11px] font-bold text-olive-dark">Admin BAZNAS</span></div>
-                            <div class="text-[10px] text-olive/50">admin@baznas-banjarbaru.id</div>
-                        </button>
-                        <button type="button" data-email="admin@upz-banjarbaru.id" data-pass="admin123" class="demo text-left bg-white border border-cream-3 rounded-xl px-3 py-2 hover:bg-cream transition">
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-orange-500"></span><span class="text-[11px] font-bold text-olive-dark">Admin UPZ</span></div>
-                            <div class="text-[10px] text-olive/50">admin@upz-banjarbaru.id</div>
-                        </button>
-                        <button type="button" data-email="user@gmail.com" data-pass="user123" class="demo text-left bg-white border border-cream-3 rounded-xl px-3 py-2 hover:bg-cream transition">
-                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sky-500"></span><span class="text-[11px] font-bold text-olive-dark">User</span></div>
-                            <div class="text-[10px] text-olive/50">user@gmail.com</div>
+                    <div class="grid gap-2">
+                        <button type="button" data-email="admin@zakatbanua.test" data-pass="password123" class="demo text-left bg-white border border-cream-3 rounded-xl px-3 py-2 hover:bg-cream transition">
+                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-violet-500"></span><span class="text-[11px] font-bold text-olive-dark">Admin BAZNAS (Super Admin)</span></div>
+                            <div class="text-[10px] text-olive/50">admin@zakatbanua.test / password123</div>
                         </button>
                     </div>
+                    <p class="text-[10px] text-olive/45 text-center mt-2">Akun lain dapat dibuat melalui menu <a href="{{ url('/register') }}" class="underline">Daftar</a>.</p>
                 </div>
             </div>
         </div>

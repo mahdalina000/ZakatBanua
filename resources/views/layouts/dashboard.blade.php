@@ -94,7 +94,7 @@
 </div>
 
 <script>
-    const API_BASE = window.ZAKAT_API_URL || 'http://localhost:4010';
+    const API_BASE = window.ZAKAT_API_URL || (location.origin + '/api');
 
     function toggleSidebar() {
         const s = document.getElementById('sidebar'), o = document.getElementById('overlay');
