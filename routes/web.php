@@ -24,3 +24,7 @@ Route::view('/beranda', 'beranda')->name('beranda');
 Route::view('/kalkulator', 'kalkulator')->name('kalkulator');
 Route::view('/direktori', 'direktori')->name('direktori');
 Route::view('/panduan', 'panduan')->name('panduan');
+
+// Autentikasi — tampilan (proses login/daftar ditangani API via JavaScript)
+Route::view('/login', 'auth.login')->name('login');
+Route::view('/register', 'auth.register')->name('register');
