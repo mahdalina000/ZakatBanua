@@ -2,8 +2,42 @@
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+@source '../js/**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+
+    /* Palet Zakat Banua — Cream & Olive */
+    --color-cream: #F5EAD8;
+    --color-cream-2: #FFF8EC;
+    --color-cream-3: #EDE0CC;
+    --color-olive: #5A6B33;
+    --color-olive-2: #4A5A2B;
+    --color-olive-3: #6B7F3D;
+    --color-olive-dark: #3D4A24;
+    --color-earth: #C5A880;
+}
+
+/* Utilitas dasar */
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); }
+
+.font-amiri { font-family: var(--font-arabic); }
+
+/* Sembunyikan scrollbar (carousel) */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Leaflet map: kurung z-index agar tidak menutupi header saat scroll */
+.map-container { position: relative; z-index: 0; }
+.leaflet-popup-content { font-family: var(--font-sans); }
+
+/* Transisi lembut */
+.fade-up { animation: fadeUp .5s ease both; }
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
