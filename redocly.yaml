@@ -1,0 +1,6 @@
+extends:
+  - recommended
+rules:
+  # Izinkan server lokal (.test / localhost) untuk kontrak dev
+  no-server-example.com: off
+  operation-operationId: warn
