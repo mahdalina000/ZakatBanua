@@ -9,6 +9,7 @@
     --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+    --font-serif-display: 'Playfair Display', Georgia, serif;
 
     /* Palet Zakat Banua — Cream & Olive */
     --color-cream: #F5EAD8;
@@ -26,6 +27,7 @@ html { scroll-behavior: smooth; }
 body { font-family: var(--font-sans); }
 
 .font-amiri { font-family: var(--font-arabic); }
+.font-playfair { font-family: var(--font-serif-display); }
 
 /* Sembunyikan scrollbar (carousel) */
 .scrollbar-hide::-webkit-scrollbar { display: none; }

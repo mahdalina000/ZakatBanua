@@ -28,3 +28,10 @@ Route::view('/panduan', 'panduan')->name('panduan');
 // Autentikasi — tampilan (proses login/daftar ditangani API via JavaScript)
 Route::view('/login', 'auth.login')->name('login');
 Route::view('/register', 'auth.register')->name('register');
+
+// Dashboard — tampilan; role ditentukan dari data API sesudah login
+Route::view('/dashboard', 'dashboard.index')->name('dashboard');
+Route::view('/dashboard/locations', 'dashboard.locations')->name('dashboard.locations');
+Route::view('/dashboard/beras', 'dashboard.beras')->name('dashboard.beras');
+Route::view('/dashboard/users', 'dashboard.users')->name('dashboard.users');
+Route::view('/dashboard/user', 'dashboard.user')->name('dashboard.user');
