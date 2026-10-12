@@ -72,4 +72,6 @@ npx @redocly/cli build-docs openapi.yaml -o docs/index.html
 - **Harga Beras:** `GET /beras-price`, `PUT /beras-price` (admin, bearerAuth)
 - **Direktori:** `GET/POST /locations`, `GET/PUT/DELETE /locations/{id}`
 
-> Endpoint ini adalah target awal. Ubah/tambah sesuai perkembangan model ZakatBanua.
+> Status: seluruh endpoint di atas **sudah diimplementasikan di Back-end** dan sudah
+> di-merge ke `main` (PR #1, commit `8c9f6fe`). Lihat `docs/API_ENDPOINTS.md` untuk
+> contoh request/response siap pakai oleh Front-end.

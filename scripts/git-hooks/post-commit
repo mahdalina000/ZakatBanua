@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Auto-push ZakatBanua.
+# Setiap kali commit, push otomatis ke origin pada branch kerja feat/*.
+# Branch main / branch lain TIDAK di-push otomatis (demi keamanan).
+#
+# Dipasang otomatis oleh `composer install` / `composer update`
+# (lihat scripts/git-hooks/install.php). Matikan dengan:
+#   git config --unset core.hooksPath
+
+branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+
+# Lewati kalau detached HEAD atau bukan branch feat/*
+case "$branch" in
+  feat/*) ;;
+  *) exit 0 ;;
+esac
+
+# Jangan push kalau ada remote yang lebih baru (hindari non-fast-forward berisik)
+git fetch --quiet origin "$branch" 2>/dev/null
+local_sha="$(git rev-parse HEAD)"
+remote_sha="$(git rev-parse "origin/$branch" 2>/dev/null)"
+
+if [ -n "$remote_sha" ] && [ "$local_sha" != "$remote_sha" ]; then
+  if ! git merge-base --is-ancestor "$remote_sha" "$local_sha" 2>/dev/null; then
+    echo ""
+    echo "  [auto-push] DILEWATI: origin/$branch punya commit yang belum ada di lokal."
+    echo "  [auto-push] Jalankan: git pull --rebase origin $branch  lalu push manual."
+    exit 0
+  fi
+fi
+
+echo ""
+echo "  [auto-push] Mendorong '$branch' ke origin..."
+if git push origin "$branch" >/dev/null 2>&1; then
+  echo "  [auto-push] OK: $branch ter-push ke GitHub."
+else
+  echo "  [auto-push] GAGAL push otomatis (cek koneksi/kredensial). Commit lokal tetap aman."
+  echo "  [auto-push] Push manual: git push origin $branch"
+fi
+exit 0
