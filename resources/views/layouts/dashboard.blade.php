@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Dashboard — Zakat Banua')</title>
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -21,9 +22,7 @@
     {{-- ===== SIDEBAR ===== --}}
     <aside id="sidebar" class="fixed lg:sticky top-0 z-50 w-[262px] h-screen bg-olive text-white flex flex-col -translate-x-full lg:translate-x-0 transition-transform">
         <div class="h-[66px] flex items-center gap-3 px-5 border-b border-white/10">
-            <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center p-1">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-full h-full object-contain">
-            </div>
+            <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-10 w-auto object-contain">
             <div class="leading-tight">
                 <div class="font-extrabold text-sm tracking-wide">ZAKAT BANUA</div>
                 <div class="text-[10px] tracking-[0.18em] text-cream/70 -mt-0.5">DASHBOARD</div>

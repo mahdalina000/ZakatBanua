@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Masuk — Zakat Banua</title>
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -19,9 +20,7 @@
         <div class="absolute -bottom-24 -right-24 w-[420px] h-[420px] rounded-full bg-olive-2/40 blur-2xl"></div>
 
         <div class="relative flex items-center gap-3">
-            <div class="w-11 h-11 bg-white rounded-xl flex items-center justify-center p-1 shadow">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo Zakat Banua" class="w-full h-full object-contain">
-            </div>
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Zakat Banua" class="h-11 w-auto object-contain">
             <div class="leading-tight">
                 <div class="font-extrabold tracking-wide">ZAKAT BANUA</div>
                 <div class="text-[10px] tracking-[0.22em] text-cream/70">BANJARBARU</div>
@@ -49,9 +48,7 @@
     <div class="relative bg-cream-2 flex flex-col">
         <div class="flex items-center justify-between p-5 lg:p-7">
             <a href="{{ url('/') }}" class="lg:hidden flex items-center gap-2">
-                <div class="w-9 h-9 bg-white rounded-lg flex items-center justify-center p-0.5 border border-cream-3">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="w-full h-full object-contain">
-                </div>
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-9 w-auto object-contain">
                 <span class="font-extrabold text-olive-dark text-sm">ZAKAT BANUA</span>
             </a>
             <a href="{{ url('/beranda') }}" class="ml-auto text-xs text-olive/60 hover:text-olive transition"><i class="fa-solid fa-arrow-left mr-1"></i> Kembali ke beranda</a>
