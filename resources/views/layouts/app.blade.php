@@ -20,9 +20,9 @@
     <div class="max-w-7xl mx-auto px-4 lg:px-6">
         <div class="flex items-center justify-between h-[64px]">
             <a href="{{ url('/beranda') }}" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-cream rounded-xl flex items-center justify-center text-olive text-xl">
-                    <i class="fa-solid fa-mosque"></i>
-                </div>
+                                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center p-0.5 shadow">
+                                    <img src="{{ asset('images/logo.png') }}" alt="Logo Zakat Banua" class="w-full h-full object-contain">
+                                </div>
                 <div class="leading-tight">
                     <div class="font-extrabold tracking-wide text-[18px]">ZAKAT BANUA</div>
                     <div class="text-[10px] tracking-[0.18em] text-cream/80 -mt-1">BANJARBARU</div>
@@ -72,7 +72,9 @@
         <div class="flex flex-col lg:flex-row justify-between gap-6">
             <div>
                 <div class="flex items-center gap-3">
-                    <div class="w-9 h-9 bg-cream rounded-lg flex items-center justify-center text-olive"><i class="fa-solid fa-mosque"></i></div>
+                    <div class="w-9 h-9 bg-white rounded-lg flex items-center justify-center p-0.5">
+                        <img src="{{ asset('images/logo.png') }}" alt="Logo Zakat Banua" class="w-full h-full object-contain">
+                    </div>
                     <span class="font-bold">ZAKAT BANUA</span>
                 </div>
                 <p class="text-sm text-cream/70 mt-3 max-w-md">Platform digital zakat terpercaya untuk warga Banjarbaru. Memudahkan perhitungan, penyaluran, dan edukasi zakat sesuai syariat.</p>

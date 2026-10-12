@@ -13,7 +13,9 @@
 <header class="bg-olive text-white">
     <div class="max-w-7xl mx-auto px-4 lg:px-6 h-[56px] flex items-center justify-between">
         <div class="flex items-center gap-3">
-            <div class="w-9 h-9 bg-cream rounded-xl flex items-center justify-center text-olive"><i class="fa-solid fa-mosque"></i></div>
+            <div class="w-9 h-9 bg-white rounded-xl flex items-center justify-center p-0.5 shadow">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo Zakat Banua" class="w-full h-full object-contain">
+            </div>
             <div class="leading-tight">
                 <div class="font-extrabold text-sm tracking-wide">ZAKAT BANUA</div>
                 <div class="text-[10px] tracking-[0.18em] text-cream/80 -mt-0.5">BANJARBARU</div>
@@ -23,10 +25,13 @@
     </div>
 </header>
 
-<section class="flex-1 flex flex-col">
+<section class="flex-1 flex flex-col relative overflow-hidden bg-[#0c1108]">
+    {{-- Latar abstrak dinamis: aliran partikel cahaya & jejak energi --}}
+    <canvas data-abstract-bg class="absolute inset-0 w-full h-full"></canvas>
+    <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,0) 40%, rgba(0,0,0,.35));"></div>
+
     {{-- Blok CREAM --}}
-    <div class="bg-cream flex-1 flex flex-col items-center justify-center px-4 py-10 lg:py-14 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, #5A6B33 1px, transparent 0); background-size: 28px 28px;"></div>
+    <div class="bg-cream/90 flex-1 flex flex-col items-center justify-center px-4 py-10 lg:py-14 relative">
         <div class="relative text-center max-w-3xl">
             <div class="inline-flex items-center gap-2 bg-white border border-cream-3 px-4 py-1.5 rounded-full text-xs font-semibold text-olive tracking-wide shadow-sm">
                 <i class="fa-solid fa-star-and-crescent"></i> PLATFORM ZAKAT DIGITAL TERPERCAYA
@@ -44,8 +49,7 @@
     </div>
 
     {{-- Blok OLIVE — carousel hadis --}}
-    <div class="bg-olive text-white flex-1 flex flex-col items-center justify-center px-4 py-8 lg:py-10 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 28px 28px;"></div>
+    <div class="bg-olive/88 backdrop-blur-sm text-white flex-1 flex flex-col items-center justify-center px-4 py-8 lg:py-10 relative">
         <div class="relative w-full max-w-3xl">
             <div class="text-center mb-4">
                 <div class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full text-[11px] tracking-[0.14em] font-semibold">HADIS TENTANG ZAKAT</div>
