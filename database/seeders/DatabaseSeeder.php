@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\BerasPrice;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,11 +16,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Akun admin utama untuk keperluan uji coba & operasional.
+        $admin = User::create([
+            'name' => 'Admin BAZNAS',
+            'email' => 'admin@zakatbanua.test',
+            'password' => 'password123',
+            'role' => 'super_admin',
+            'is_active' => true,
+        ]);
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Harga beras acuan awal (sumber data kalkulator zakat fitrah).
+        BerasPrice::create([
+            'price' => 16000,
+            'note' => 'Harga acuan awal BAZNAS',
+            'updated_by' => $admin->id,
         ]);
     }
 }
