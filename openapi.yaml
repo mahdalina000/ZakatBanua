@@ -5,7 +5,7 @@ info:
     Kontrak API resmi untuk aplikasi ZakatBanua.
     Design-First - file ini adalah sumber kebenaran tunggal (Single Source of Truth).
     Semua implementasi backend (Laravel) dan frontend harus mengacu ke kontrak ini.
-    Base URL lokal via Laradock: https://zakatbanua.test/api
+    Base URL lokal via Laradock: https://zakat-banua.test/api
   version: 1.0.0
   contact:
     name: Tim ZakatBanua
@@ -14,9 +14,9 @@ info:
     name: MIT
     url: https://opensource.org/licenses/MIT
 servers:
-  - url: https://zakatbanua.test/api
+  - url: https://zakat-banua.test/api
     description: Local - Laradock (https)
-  - url: http://zakatbanua.test/api
+  - url: http://zakat-banua.test/api
     description: Local - Laradock (http)
   - url: http://localhost/api
     description: Fallback localhost
